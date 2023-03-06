@@ -3,3 +3,4 @@ from .service_response import ServiceResponse
 
 class ServiceViewResponse(ServiceResponse):
     model: Model
+    usage: int = 0
