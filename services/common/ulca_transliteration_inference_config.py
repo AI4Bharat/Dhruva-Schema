@@ -7,4 +7,4 @@ from .ulca_language_pair import _ULCALanguagePair
 class _ULCATransliterationInferenceConfig(_ULCABaseInferenceRequestConfig):
     language: _ULCALanguagePair
     isSentence: bool = True
-    numSuggestions: int = 5
+    numSuggestions: int = 0
