@@ -21,7 +21,8 @@ class _ULCATtsInferenceRequestConfig(_ULCABaseInferenceRequestConfig):
 
 class _ULCATtsInputText(BaseModel):
     source: str
-    audioDuration: float
+    audioDuration: Optional[float] = None
+
 
 class ULCATtsInferenceRequest(_ULCABaseInferenceRequest):
     input: List[_ULCATtsInputText]
