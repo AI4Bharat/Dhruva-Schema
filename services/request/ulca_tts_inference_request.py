@@ -1,5 +1,7 @@
 from typing import List, Optional
 
+from pydantic import BaseModel
+
 from ..common import (
     AudioFormat,
     Gender,
@@ -17,6 +19,10 @@ class _ULCATtsInferenceRequestConfig(_ULCABaseInferenceRequestConfig):
     language: _ULCALanguage
 
 
+class _ULCATtsInputText(BaseModel):
+    source: str
+    audioDuration: float
+
 class ULCATtsInferenceRequest(_ULCABaseInferenceRequest):
-    input: List[_ULCAText]
+    input: List[_ULCATtsInputText]
     config: _ULCATtsInferenceRequestConfig
