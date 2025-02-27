@@ -3,7 +3,7 @@ from typing import Any, Dict, List, Optional
 
 from pydantic import BaseModel, Field
 
-from .ulca_task import _ULCATask
+from ..common import _ULCATask
 
 
 class _OAuthId(BaseModel):
@@ -58,7 +58,7 @@ class _Benchmark(BaseModel):
     score: List[_BenchmarkMetric]
 
 
-class Model(BaseModel):
+class ModelViewResponse(BaseModel):
     version: str
     name: str
     description: str
